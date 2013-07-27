@@ -1,0 +1,18 @@
+
+
+<%= form_for @weight, remote: true do |f| %>
+  
+  <%= render 'shared/error_messages', object: f.object %>
+  <fieldset>
+  	<%= f.label :value, "weight" %>
+	<%= f.text_field :value %>
+	<%= f.submit %>
+  </fieldset>
+<% end %>
+
+<%=  debug @weights.attributes.inspect %>
+<div id='weights-listing'>
+	<% @weights.each do |w| %>
+		<%= render 'weight', w: w %>
+	<% end %>
+</div>
