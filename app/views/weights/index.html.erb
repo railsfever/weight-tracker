@@ -10,7 +10,6 @@
   </fieldset>
 <% end %>
 
-<%=  debug @weights.attributes.inspect %>
 <div id='weights-listing'>
 	<% @weights.each do |w| %>
 		<%= render 'weight', w: w %>

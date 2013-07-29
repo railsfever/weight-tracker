@@ -3,11 +3,13 @@ class WeightsController < ApplicationController
 	before_filter :authenticate_user!
 	
 	def index
+		debugger
 		@weights = Weight.all
 		@weight = Weight.new
 	end
 
 	def new
+
 		respond_to do |format|
       		format.html # new.html.erb
       		format.json { render json: @weight } 
